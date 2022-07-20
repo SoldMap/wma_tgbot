@@ -31,7 +31,7 @@ bot.command('keyboard', (ctx) => {
   ctx.reply(
     'Keyboard',
     Markup.inlineKeyboard([
-      Markup.button.callback('First option', 'first'),
+      Markup.button.callback('First option', 'Lisa'),
       Markup.button.callback('Second option', 'second'),
     ])
   );
@@ -39,10 +39,8 @@ bot.command('keyboard', (ctx) => {
 
 bot.on('text', (ctx) => {
   ctx.reply(
-    'You choose the ' +
-      (ctx.message.text === 'first' ? 'First' : 'Second') +
-      ' Option!'
-  );
+      ctx.message.text === 'Lisa' ? 'A sho Lisa? Lisa biaaatch' : 'Second'
+    );
 
   if (chatId) {
     telegram.sendMessage(

@@ -1,5 +1,8 @@
-#Ignore node modules
+# Ignore node modules
 node_modules/
 
 # dotenv environment variables file
 .env
+
+# dist
+dist/
